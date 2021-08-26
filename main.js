@@ -10,12 +10,33 @@ const createHTML = async (fullName, username, imgUrl) => {
     const head = document.getElementsByTagName('HEAD')[0];
 
     const styleCustom = document.createElement('style');
-    styleCustom.innerHTML = '@font-face {font-family: "Graphik-bold" ;'
-        + 'src: url("https://apify.com/fonts/Graphik-Bold-Web.woff2") format("woff2");'
-        + 'font-weight: 700; font-style: normal; font-stretch: normal;}';
+    // styleCustom.innerHTML = '@font-face {font-family: "Graphik" ;'
+    //     + 'src: url("https://apify.com/fonts/Graphik-Medium-Web.woff2") format("woff2");'
+    //     + 'font-weight: 500; font-style: normal; font-stretch: normal;}';
+    styleCustom.innerHTML = `
+        @font-face {
+            font-family: 'Graphik';
+            src: url('https://apify.com/fonts/Graphik-Light-Web.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: swap;
+        }
 
+        @font-face {
+            font-family: 'Graphik';
+            src: url('https://apify.com/fonts/Graphik-Medium-Web.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            font-display: swap;
+        }
+    `;
     const fontPreLoad = document.createElement('link');
-    fontPreLoad.innerHTML = '<link rel="preload" href="https://apify.com/fonts/Graphik-Bold-Web.woff2" as="font" crossorigin="anonymous" />';
+    fontPreLoad.innerHTML = `
+        <link rel="preload" href="https://apify.com/fonts/Graphik-Medium-Web.woff2" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="https://apify.com/fonts/Graphik-Light-Web.woff2" as="font" crossorigin="anonymous" />
+    `;
 
     head.append(styleCustom);
     head.append(fontPreLoad);
