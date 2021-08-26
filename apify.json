@@ -1,0 +1,7 @@
+{
+	"name": "apify-user-og-image-generator",
+	"version": "0.0",
+	"buildTag": "latest",
+	"env": null,
+	"template": "project_empty"
+}
