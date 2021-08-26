@@ -16,8 +16,8 @@ const createHTML = async (fullName, username, imgUrl) => {
     styleCustom.innerHTML = `
         @font-face {
             font-family: 'Graphik';
-            src: url('https://apify.com/fonts/Graphik-Light-Web.woff2') format('woff2');
-            font-weight: 300;
+            src: url('https://apify.com/fonts/Graphik-Regular-Web.woff2') format('woff2');
+            font-weight: 400;
             font-style: normal;
             font-stretch: normal;
             font-display: swap;
@@ -25,8 +25,8 @@ const createHTML = async (fullName, username, imgUrl) => {
 
         @font-face {
             font-family: 'Graphik';
-            src: url('https://apify.com/fonts/Graphik-Medium-Web.woff2') format('woff2');
-            font-weight: 500;
+            src: url('https://apify.com/fonts/Graphik-Semibold-Web.woff2') format('woff2');
+            font-weight: 600;
             font-style: normal;
             font-stretch: normal;
             font-display: swap;
@@ -34,8 +34,8 @@ const createHTML = async (fullName, username, imgUrl) => {
     `;
     const fontPreLoad = document.createElement('link');
     fontPreLoad.innerHTML = `
-        <link rel="preload" href="https://apify.com/fonts/Graphik-Medium-Web.woff2" as="font" crossorigin="anonymous" />
-        <link rel="preload" href="https://apify.com/fonts/Graphik-Light-Web.woff2" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="https://apify.com/fonts/Graphik-Regular-Web.woff2" as="font" crossorigin="anonymous" />
+        <link rel="preload" href="https://apify.com/fonts/Graphik-Semibold-Web.woff2" as="font" crossorigin="anonymous" />
     `;
 
     head.append(styleCustom);
@@ -122,18 +122,18 @@ const createHTML = async (fullName, username, imgUrl) => {
     `);
 
     publicProfileSpan.setAttribute('style', `
-       font-weight: 500;
+       font-weight: 600;
        font-size: 1.8rem;
        margin-bottom: 1rem;
     `);
 
     fullNameSpan.setAttribute('style', `
-       font-weight: 500;
+       font-weight: 600;
        font-size: 5rem;
     `);
 
     usernameSpan.setAttribute('style', `
-        font-weight: 300;
+        font-weight: 400;
         font-size: 1.8rem;
     `);
 
