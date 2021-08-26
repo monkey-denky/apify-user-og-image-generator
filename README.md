@@ -1,35 +1,23 @@
-# Empty project
+# Apify public user Open Graph (OG) image generator
 
-This template is useful when you're already familiar with the Apify SDK and want to start
-with a clean slate. It does not include `puppeteer` or `playwright` so install them manually
-and update the Dockerfile if you need them.
+This actor is for sharing Apify public users on social media.
 
-If you're looking for examples or want to learn more visit:
+## How it works
 
-- [Tutorial](https://sdk.apify.com/docs/guides/getting-started)
-- [Documentation](https://sdk.apify.com/docs/api/apify)
-- [Examples](https://sdk.apify.com/docs/examples/crawl-multiple-urls)
+1. Generates an HTML page from input and lays out the information in a nice card format.
 
-## Documentation reference
+2. Takes a screenshot and saves it in JPEG or PNG format.
 
-- [Apify SDK](https://sdk.apify.com/)
-- [Apify Actor documentation](https://docs.apify.com/actor)
-- [Apify CLI](https://docs.apify.com/cli)
+## Input
 
-## Writing a README
+Enter username, fullName and the profile picture URL.
 
-See our tutorial on [writing READMEs for your actors](https://help.apify.com/en/articles/2912548-how-to-write-great-readme-for-your-actors) if you need more inspiration.
+You can pick JPEG or PNG format.
 
-### Table of contents
+Depending on the size of image you need, adjust the image scale accordingly.
 
-If your README requires a table of contents, use the template below and make sure to keep the `<!-- toc start -->` and `<!-- toc end -->` markers.
+## Output
 
-<!-- toc start -->
-- Introduction
-- Use Cases
-  - Case 1
-  - Case 2
-- Input
-- Output
-- Miscellaneous
- <!-- toc end -->
+The finished product will be in the default key-value store.
+
+If you're checking it right after the actor run, you may need to press the refresh button if you can't see the image.
