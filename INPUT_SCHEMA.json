@@ -51,7 +51,6 @@
     "required": [
         "fullName",
         "username",
-        "imgUrl",
         "type"
     ]
 }
