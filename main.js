@@ -59,7 +59,7 @@ const createHTML = async (fullName, username, imgUrl) => {
     publicProfileSpan.innerHTML = 'PUBLIC PROFILE';
 
     const fullNameSpan = document.createElement('span');
-    fullNameSpan.innerHTML = fullName;
+    fullNameSpan.innerHTML = fullName || 'Apify user';
 
     const usernameSpan = document.createElement('span');
     usernameSpan.innerHTML = username;
