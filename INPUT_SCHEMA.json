@@ -9,7 +9,8 @@
             "type": "string",
             "description": "The user's full name",
             "editor": "textfield",
-            "prefill": "Apify Technologies"
+            "prefill": "Apify Technologies",
+             "default": "Apify user"
         },
         "username": {
             "title": "Username",
